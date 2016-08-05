@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20101" started-at="2016-08-05T13:33:43Z" finished-at="2016-08-05T13:34:03Z">
+  <suite name="Default suite" duration-ms="16170" started-at="2016-08-05T13:57:18Z" finished-at="2016-08-05T13:57:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20101" started-at="2016-08-05T13:33:43Z" finished-at="2016-08-05T13:34:03Z">
-      <class name="test.WrongPassword">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.WrongPassword@6ea12c19]" name="beforeClass" is-config="true" duration-ms="9357" started-at="2016-08-05T15:33:43Z" finished-at="2016-08-05T15:33:52Z">
+    <test name="Default test" duration-ms="16170" started-at="2016-08-05T13:57:18Z" finished-at="2016-08-05T13:57:34Z">
+      <class name="test.Ana">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.Ana@6ea12c19]" name="beforeClass" is-config="true" duration-ms="9959" started-at="2016-08-05T15:57:18Z" finished-at="2016-08-05T15:57:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:test.WrongPassword@6ea12c19]" name="f" duration-ms="10301" started-at="2016-08-05T15:33:52Z" finished-at="2016-08-05T15:34:03Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:test.Ana@6ea12c19]" name="f" duration-ms="6184" started-at="2016-08-05T15:57:28Z" finished-at="2016-08-05T15:57:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.WrongPassword@6ea12c19]" name="afterClass" is-config="true" duration-ms="419" started-at="2016-08-05T15:34:03Z" finished-at="2016-08-05T15:34:03Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Ana@6ea12c19]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-08-05T15:57:34Z" finished-at="2016-08-05T15:57:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.WrongPassword -->
+      </class> <!-- test.Ana -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
