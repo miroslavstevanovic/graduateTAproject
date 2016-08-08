@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16170" started-at="2016-08-05T13:57:18Z" finished-at="2016-08-05T13:57:34Z">
+  <suite name="Default suite" duration-ms="64758" started-at="2016-08-08T15:57:27Z" finished-at="2016-08-08T15:58:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16170" started-at="2016-08-05T13:57:18Z" finished-at="2016-08-05T13:57:34Z">
-      <class name="test.Ana">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.Ana@6ea12c19]" name="beforeClass" is-config="true" duration-ms="9959" started-at="2016-08-05T15:57:18Z" finished-at="2016-08-05T15:57:28Z">
+    <test name="Default test" duration-ms="64758" started-at="2016-08-08T15:57:27Z" finished-at="2016-08-08T15:58:31Z">
+      <class name="test.cdd.CheckBoxFunctionality">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="beforeClass" is-config="true" duration-ms="10851" started-at="2016-08-08T17:57:27Z" finished-at="2016-08-08T17:57:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:test.Ana@6ea12c19]" name="f" duration-ms="6184" started-at="2016-08-05T15:57:28Z" finished-at="2016-08-05T15:57:34Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="f" duration-ms="53324" started-at="2016-08-08T17:57:37Z" finished-at="2016-08-08T17:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Ana@6ea12c19]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-08-05T15:57:34Z" finished-at="2016-08-05T15:57:34Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="afterClass" is-config="true" duration-ms="557" started-at="2016-08-08T17:58:31Z" finished-at="2016-08-08T17:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.Ana -->
+      </class> <!-- test.cdd.CheckBoxFunctionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
