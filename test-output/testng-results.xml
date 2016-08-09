@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13911" started-at="2016-08-08T21:11:21Z" finished-at="2016-08-08T21:11:35Z">
+  <suite name="Default suite" duration-ms="63502" started-at="2016-08-08T21:23:51Z" finished-at="2016-08-08T21:24:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13911" started-at="2016-08-08T21:11:21Z" finished-at="2016-08-08T21:11:35Z">
-      <class name="test.login.WrongPassword">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.login.WrongPassword@6ea12c19]" name="beforeClass" is-config="true" duration-ms="9815" started-at="2016-08-08T23:11:21Z" finished-at="2016-08-08T23:11:31Z">
+    <test name="Default test" duration-ms="63502" started-at="2016-08-08T21:23:51Z" finished-at="2016-08-08T21:24:54Z">
+      <class name="test.cdd.CheckBoxFunctionality">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="beforeClass" is-config="true" duration-ms="10558" started-at="2016-08-08T23:23:51Z" finished-at="2016-08-08T23:24:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:test.login.WrongPassword@6ea12c19]" name="f" duration-ms="3523" started-at="2016-08-08T23:11:31Z" finished-at="2016-08-08T23:11:35Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="f" duration-ms="52374" started-at="2016-08-08T23:24:01Z" finished-at="2016-08-08T23:24:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.login.WrongPassword@6ea12c19]" name="afterClass" is-config="true" duration-ms="546" started-at="2016-08-08T23:11:35Z" finished-at="2016-08-08T23:11:35Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="afterClass" is-config="true" duration-ms="552" started-at="2016-08-08T23:24:54Z" finished-at="2016-08-08T23:24:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- test.login.WrongPassword -->
+      </class> <!-- test.cdd.CheckBoxFunctionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

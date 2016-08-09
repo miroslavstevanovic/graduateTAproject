@@ -2,6 +2,7 @@ package library.pages;
 
 import javax.naming.directory.SearchResult;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.server.browserlaunchers.Sleeper;
@@ -51,7 +52,9 @@ public class HomePage {
 	}
 	
 	public SearchResultPage clickOnGoButton(){
-		goButton.click();
+		//goButton.click();
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", goButton);
 		return new SearchResultPage(driver);
 }
 }
