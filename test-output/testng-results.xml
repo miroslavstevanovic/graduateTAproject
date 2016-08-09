@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63502" started-at="2016-08-08T21:23:51Z" finished-at="2016-08-08T21:24:54Z">
+  <suite name="Default suite" duration-ms="62883" started-at="2016-08-09T08:48:12Z" finished-at="2016-08-09T08:49:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63502" started-at="2016-08-08T21:23:51Z" finished-at="2016-08-08T21:24:54Z">
+    <test name="Default test" duration-ms="62883" started-at="2016-08-09T08:48:12Z" finished-at="2016-08-09T08:49:15Z">
       <class name="test.cdd.CheckBoxFunctionality">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="beforeClass" is-config="true" duration-ms="10558" started-at="2016-08-08T23:23:51Z" finished-at="2016-08-08T23:24:01Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="beforeClass" is-config="true" duration-ms="10359" started-at="2016-08-09T10:48:12Z" finished-at="2016-08-09T10:48:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="f()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="f" duration-ms="52374" started-at="2016-08-08T23:24:01Z" finished-at="2016-08-08T23:24:54Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="f" duration-ms="51866" started-at="2016-08-09T10:48:23Z" finished-at="2016-08-09T10:49:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="afterClass" is-config="true" duration-ms="552" started-at="2016-08-08T23:24:54Z" finished-at="2016-08-08T23:24:54Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.cdd.CheckBoxFunctionality@6ea12c19]" name="afterClass" is-config="true" duration-ms="628" started-at="2016-08-09T10:49:15Z" finished-at="2016-08-09T10:49:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

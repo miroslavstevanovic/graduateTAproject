@@ -18,7 +18,7 @@ public class CDDPage {
 	
 	public CDDPage (WebDriver driver){
 		this.driver = driver;
-		Sleeper.sleepTightInSeconds(5);
+		Sleeper.sleepTightInSeconds(3);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -32,6 +32,7 @@ public class CDDPage {
 		logOutLink.click();
 		return new LoginPage(driver);
 	}
+	
 
 	public boolean isCheckBoxSelected(){
 		String attributeValue = firstCheckBox.getAttribute("title");

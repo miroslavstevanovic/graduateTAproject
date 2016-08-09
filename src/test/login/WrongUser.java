@@ -38,7 +38,7 @@ public class WrongUser {
 		loginPage.clickOnLoginButtonWrongData();
 		Sleeper.sleepTightInSeconds(3);
 
-		Sleeper.sleepTightInSeconds(5);
+		Sleeper.sleepTightInSeconds(3);
 		String message = loginPage.getTextFromErrorLable();
 		System.out.println(message);
 
