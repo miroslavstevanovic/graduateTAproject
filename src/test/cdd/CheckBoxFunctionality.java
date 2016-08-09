@@ -14,12 +14,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
 public class CheckBoxFunctionality {
-
+	
 	private WebDriver driver;
+	
+	boolean b = false;
+	boolean isChecked = false;
+	
 	LoginPage loginPage;
 	HomePage homepage;
 	SearchResultPage searchResult;
 	CDDPage cddPage;
+	
+	String logInMessage;
+	
 
 	String expectedLoginMessage = "You are logged in as";
 	String searchValue = "career";
@@ -30,7 +37,6 @@ public class CheckBoxFunctionality {
 		System.out.println("Test: Start");
 
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
 		loginPage = new LoginPage(driver);
 
 	}
@@ -45,11 +51,19 @@ public class CheckBoxFunctionality {
 			homepage = loginPage.clickOnLoginButton();
 
 			String loginMessage = homepage.getTextFromLogInfoLabel();
+			
 			assert loginMessage.contains(expectedLoginMessage) : "You are not logged in";
+			
 			homepage.typeSearchValueIntoSearchField(searchValue);
 			searchResult = homepage.clickOnGoButton();
 			cddPage = searchResult.clickOnCDDLink();
+			
+			
+			
 			cddPage.checkFirstCheckBox();
+			isChecked = true;
+			
+			
 			loginPage = cddPage.clickOnLogOutLink();
 
 			loginPage.typePassword(Property.password);
@@ -63,6 +77,9 @@ public class CheckBoxFunctionality {
 			assert cddPage.isCheckBoxSelected() : "Check box should be selected";
 			cddPage.checkFirstCheckBox();
 			loginPage = cddPage.clickOnLogOutLink();
+			
+			System.out.println("Test passed");
+			
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -74,7 +91,25 @@ public class CheckBoxFunctionality {
 
 	@AfterClass
 	public void afterClass() {
+		
+		
+		driver.quit();
+	if (isChecked){
+		driver = new FirefoxDriver ();
+		loginPage = new LoginPage(driver);
+		loginPage.typePassword(Property.password);
+		loginPage.typeUsername(Property.username);
+		homepage = loginPage.clickOnLoginButton();
+		logInMessage = homepage.getTextFromLogInfoLabel();
+		assert logInMessage.contains(expectedLoginMessage) : "You are not logged in";
+		homepage.typeSearchValueIntoSearchField(searchValue);
+		searchResult = homepage.clickOnGoButton();
+		cddPage = searchResult.clickOnCDDLink();
+		assert cddPage.isCheckBoxSelected() : "Check box should be selected";
+		cddPage.unCheckFirstCheckBox();
+		loginPage = cddPage.clickOnLogOutLink();
 		driver.quit();
 	}
+	}
+	}
 
-}

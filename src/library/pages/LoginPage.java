@@ -26,6 +26,7 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 
 		this.driver = driver;
+		driver.manage().window().maximize();
 		driver.get(Property.URL);
 		PageFactory.initElements(driver, this);
 	}
@@ -79,6 +80,15 @@ public class LoginPage {
 	public String getTextFromErrorLable() {
 		return errorLable.getText();
 
+	}
+	/**
+	 * Clear user and pass fields
+	 * @return (LoginPage)
+	 */
+	public LoginPage clearUsernameAndPasswordFields(){
+		usernameInputField.clear();
+		passwordInputField.clear();
+		return this;
 	}
 	
 	
