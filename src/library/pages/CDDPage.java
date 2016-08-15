@@ -1,25 +1,21 @@
 package library.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class CDDPage {
+public class CDDPage extends Page {
 
 	@FindBy(xpath = "//input[contains(@title, 'CDD Animation Scripts')]")
 	private WebElement firstCheckBox;
 
-	@FindBy(linkText = "Log out")
-	private WebElement logOutLink;
-
-	private WebDriver driver;
+	private By byFirstCheckBox = new By.ByXPath("//input[contains(@title, 'CDD Animation Scripts')]");
 
 	public CDDPage(WebDriver driver) {
-		this.driver = driver;
-		Sleeper.sleepTightInSeconds(3);
-		PageFactory.initElements(driver, this);
+		super(driver);
+		waitForPageToBeLoaded(driver, byFirstCheckBox, 5);
 	}
 
 	/**
@@ -30,14 +26,13 @@ public class CDDPage {
 	public CDDPage checkFirstCheckBox() {
 
 		if (!isCheckBoxSelected()) {
-			logOutLink.click();
+			firstCheckBox.click();
 		}
-		firstCheckBox.click();
 
 		Sleeper.sleepTightInSeconds(3);
 		return this;
 	}
-	
+
 	/**
 	 * Uncheck on first check box
 	 * 
@@ -45,23 +40,12 @@ public class CDDPage {
 	 */
 	public CDDPage unCheckFirstCheckBox() {
 
-		if (!isCheckBoxSelected()) {
-			logOutLink.click();
+		if (isCheckBoxSelected()) {
+			firstCheckBox.click();
 		}
-		firstCheckBox.click();
 
 		Sleeper.sleepTightInSeconds(3);
 		return this;
-	}
-
-	/**
-	 * Click Log out link
-	 * 
-	 * @return (LoginPage)
-	 */
-	public LoginPage clickOnLogOutLink() {
-		Sleeper.sleepTightInSeconds(3);
-		return new LoginPage(driver);
 	}
 
 	/**

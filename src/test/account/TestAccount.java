@@ -6,10 +6,10 @@ import library.data.Property;
 import library.pages.HomePage;
 import library.pages.LoginPage;
 import library.pages.MyProfilePage;
+import library.util.Prepare;
 
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
 public class TestAccount {
@@ -23,7 +23,8 @@ public class TestAccount {
 	@BeforeClass
 	public void beforeClass() {
 		System.out.println("Enter in before class");
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = Prepare.chromeDriver();
 		loginPage = new LoginPage(driver);
 		driver.manage().window().maximize();
 

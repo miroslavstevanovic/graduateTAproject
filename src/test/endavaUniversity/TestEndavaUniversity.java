@@ -6,10 +6,10 @@ import library.data.Property;
 import library.pages.HomePage;
 import library.pages.InternalSystemPage;
 import library.pages.LoginPage;
+import library.util.Prepare;
 
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.testng.annotations.AfterClass;
 
@@ -24,7 +24,8 @@ public class TestEndavaUniversity {
 	@BeforeClass
 	public void beforeClass() {
 		System.out.println("Enter in before class");
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = Prepare.chromeDriver();
 		loginPage = new LoginPage(driver);
 		driver.manage().window().maximize();
 
@@ -55,7 +56,9 @@ public class TestEndavaUniversity {
 	@AfterClass
 	public void afterClass() {
 		System.out.println("Enter in after class");
+		loginPage = homepage.clickOnLogOutLink();
 		driver.quit();
 	}
 
 }
+

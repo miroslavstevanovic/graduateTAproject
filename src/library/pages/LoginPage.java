@@ -1,13 +1,12 @@
 package library.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import library.data.Property;
 
-public class LoginPage {
+public class LoginPage extends Page {
 
 	@FindBy(id = "username")
 	private WebElement usernameInputField;
@@ -21,34 +20,28 @@ public class LoginPage {
 	@FindBy(className = "error")
 	private WebElement errorLable;
 
-	private WebDriver driver;
+	private By byLoginBtn = new By.ById("loginbtn");
 
 	public LoginPage(WebDriver driver) {
-
-		this.driver = driver;
+		super(driver);
 		driver.manage().window().maximize();
 		driver.get(Property.URL);
-		PageFactory.initElements(driver, this);
+		waitForPageToBeLoaded(driver, byLoginBtn, 5);
 	}
 
 	/**
-	 * Type username into username field
-	 * 
-	 * @param username
-	 *            (String)
+	 * Type username into username fiel
+	 * @param username (String)
 	 * @return (LoginPage)
 	 */
 	public LoginPage typeUsername(String username) {
-
 		usernameInputField.sendKeys(username);
 		return this;
 	}
 
 	/**
 	 * Type password into password field
-	 * 
-	 * @param password
-	 *            (String)
+	 * @param password (String)
 	 * @return (LogiPage)
 	 */
 	public LoginPage typePassword(String password) {
@@ -59,7 +52,6 @@ public class LoginPage {
 
 	/**
 	 * Click on Login button
-	 * 
 	 * @return Homepage
 	 */
 	public HomePage clickOnLoginButton() {
@@ -69,7 +61,6 @@ public class LoginPage {
 
 	/**
 	 * Click on Login button
-	 * 
 	 * @return LoginPage
 	 */
 	public LoginPage clickOnLoginButtonWrongData() {
@@ -81,17 +72,14 @@ public class LoginPage {
 		return errorLable.getText();
 
 	}
+
 	/**
 	 * Clear user and pass fields
 	 * @return (LoginPage)
 	 */
-	public LoginPage clearUsernameAndPasswordFields(){
+	public LoginPage clearUsernameAndPasswordFields() {
 		usernameInputField.clear();
 		passwordInputField.clear();
 		return this;
 	}
-	
-	
-	
-
 }

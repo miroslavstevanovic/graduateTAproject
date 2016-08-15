@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 
 import library.data.Property;
 import library.pages.LoginPage;
+import library.util.Prepare;
 
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.testng.annotations.AfterClass;
 
@@ -22,7 +22,8 @@ public class WrongUser {
 
 		System.out.println("Test: Start");
 
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = Prepare.chromeDriver();
 		driver.manage().window().maximize();
 		loginPage = new LoginPage(driver);
 	}

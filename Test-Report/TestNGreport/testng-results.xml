@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="test" duration-ms="18811" started-at="2016-08-10T10:03:52Z" finished-at="2016-08-10T10:04:11Z">
+    <groups>
+      <group name="login">
+        <method signature="TNGAnnotations.f()[pri:0, instance:test.login.TNGAnnotations@67117f44]" name="f" class="test.login.TNGAnnotations"/>
+      </group> <!-- login -->
+    </groups>
+    <test name="one script" duration-ms="18811" started-at="2016-08-10T10:03:52Z" finished-at="2016-08-10T10:04:11Z">
+      <class name="test.login.TNGAnnotations">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test.login.TNGAnnotations@67117f44]" name="beforeClass" is-config="true" duration-ms="14023" started-at="2016-08-10T12:03:52Z" finished-at="2016-08-10T12:04:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="f()[pri:0, instance:test.login.TNGAnnotations@67117f44]" name="f" duration-ms="3736" started-at="2016-08-10T12:04:06Z" finished-at="2016-08-10T12:04:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.login.TNGAnnotations@67117f44]" name="afterClass" is-config="true" duration-ms="1014" started-at="2016-08-10T12:04:10Z" finished-at="2016-08-10T12:04:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.login.TNGAnnotations -->
+    </test> <!-- one script -->
+  </suite> <!-- test -->
+</testng-results>

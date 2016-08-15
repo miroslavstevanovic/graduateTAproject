@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.account.TestAccount">
+      <class name="test.endavaUniversity.TestEndavaUniversity">
         <methods>
-          <include name="f"/>
-          <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="f1"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- test.account.TestAccount -->
+      </class> <!-- test.endavaUniversity.TestEndavaUniversity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

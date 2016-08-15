@@ -7,15 +7,16 @@ import library.pages.CDDPage;
 import library.pages.HomePage;
 import library.pages.LoginPage;
 import library.pages.SearchResultPage;
+import library.util.Prepare;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.server.browserlaunchers.Sleeper;
 import org.testng.annotations.AfterClass;
 
+	//@Test (groups = {"login"})
 public class TNGAnnotations {
 
 	private static WebDriver driver;
@@ -25,9 +26,10 @@ public class TNGAnnotations {
 	SearchResultPage searchResult;
 	CDDPage cddPage;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void beforeClass() {
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = Prepare.chromeDriver();
 		loginPage = new LoginPage(driver);
 		System.out.println("Before Class");
 	}
@@ -38,7 +40,7 @@ public class TNGAnnotations {
 		System.out.println("Before Method");
 	}
 
-	@Test
+	@Test(groups = {"login"})
 	public void f() {
 
 		loginPage.typeUsername(Property.username);
@@ -68,7 +70,7 @@ public class TNGAnnotations {
 		System.out.println("Test passed");
 	}
 
-	@Test(dependsOnMethods = "f2")
+	@Test//(dependsOnMethods = "f2")
 	public void f3() {
 		loginPage.typeUsername(Property.username);
 		loginPage.typePassword(Property.password);
